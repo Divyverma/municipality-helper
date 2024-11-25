@@ -1,0 +1,103 @@
+.reg-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content:space-between;
+    /* padding: 30px; */
+}
+
+.reg-login-form{
+    /* border: 5px solid blue; */
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.reg-heading{
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.reg-input-fields{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.reg-input-fields input{
+    height: 40px;
+    width: 250px;
+    padding: 5px 8px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: rgb(235, 232, 232);
+    border-radius: 8px;
+}
+
+.reg-design-part{
+    /* border: 5px solid rgb(211, 210, 210); */
+    border-radius: 0px 65px 65px 0px;
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    /* background: rgb(211, 210, 210); */
+    background: black;
+    color: white;
+}
+
+
+.reg-login-form button{
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: black;
+    color: white;
+}
+
+.reg-login-form button:active{
+    background-color: white;
+    color: black;
+}
+
+.reg-login-form p{
+    padding: 5px;
+    margin-left: -25px;
+}
+
+.selection{
+    font-size: 18px;
+}
+
+.selection label{
+    padding-right: 4px;
+}
+
+.selection select{
+    height: 40px;
+    width: 150px;
+    padding: 5px 8px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: rgb(235, 232, 232);
+    border-radius: 8px;
+}
