@@ -21,13 +21,13 @@ const Register = () => {
           <label for="lang">Register as:</label>
           <select>
             <option value="select option" selected>select option</option>
-            <option value="Citizens">Citizens</option>
+            <option value="Citizens">Citizen</option>
             <option value="Municipal Authorities">Municipal Authorities</option>
           </select>
           </div>
       </div>
       <button>Register</button>
-      <p>Aready have account? <Link to="/login">Login</Link></p>
+      <p>Allready have account? <Link to="/login">Login</Link></p>
     </div>
   </div>
   )
