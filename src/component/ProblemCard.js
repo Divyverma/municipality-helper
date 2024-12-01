@@ -1,16 +1,29 @@
-import React from 'react'
-import '../styles/problemcard.css'
-import { FaLocationDot } from "react-icons/fa6";
+import React from "react";
+
 
 const ProblemCard = () => {
   return (
-    <div className='card-div'>
-      <h3>Issue tittle</h3>
-      <img src='https://upload.wikimedia.org/wikipedia/commons/4/4e/Damaged_dangerous_street_light_pole_20180524.jpg' alt='issue-image' />
-      <p>Issue description all about image what is.....</p>
-      <h4><FaLocationDot/> Location</h4>
-    </div>
-  )
-}
+    <>
+      <div class="card sm:max-w-sm m-2">
+        <figure>
+          <img
+            src="https://cdn.flyonui.com/fy-assets/components/card/image-9.png"
+            alt="Watch"
+          />
+        </figure>
+        <div class="card-body">
+          <h5 class="card-title mb-2.5">Apple Smart Watch</h5>
+          <p class="mb-4">
+            Stay connected, motivated, and healthy with the latest Apple Watch.
+          </p>
+          <div class="card-actions">
+            <button class="btn btn-primary">Buy Now</button>
+            <button class="btn btn-secondary btn-soft">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default ProblemCard
+export default ProblemCard;

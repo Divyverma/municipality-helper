@@ -5,7 +5,9 @@ import Login from './component/Login'
 import Register from './component/Register'
 import SubmitProblem from './component/SubmitProblem'
 import Navbar from './component/Navbar'
+import Footer from './component/Footer'
 import TrackPage from './component/TrackPage'
+import './index.css'
 
 const App = () => {
 
@@ -20,6 +22,7 @@ const App = () => {
         <Route path='/reportproblem' element={<SubmitProblem/>} />
         <Route path='/track' element={<TrackPage/>} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   )
 }

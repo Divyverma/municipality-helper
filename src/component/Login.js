@@ -1,26 +1,29 @@
-import React from 'react'
+import React from "react";
 import '../styles/login.css'
-import { Link } from 'react-router'
+import { Link } from "react-router";
 
 const Login = () => {
   return (
-    <div className='container'>
-      <div className='login-form'>
-        <h2 className='heading'>Welcome Back!</h2>
-        <div className='input-fields'>
-            <input type='text' placeholder='email'/>
-            <input type='password' placeholder='password' />
+    <div className="log-container">
+      <div className="log-login-form">
+        <h2 className="log-heading">Login here</h2>
+        <div className="log-input-fields">
+          <input type="text" placeholder="email" />
+          <input type="password" placeholder="password" />
         </div>
         <button>Login</button>
-        <p>Don't have account? <Link to="/register">Register</Link></p>
+        <p>
+          Don't have account? <Link to="/register">Register</Link>
+        </p>
       </div>
-      <div className='design-part'>
+
+      <div className="log-design-part">
         {/* design */}
-        <h1>Welcome back</h1>
-        <p>Get started Again</p>
+        <h1>Welcome Back!</h1>
+        <p>Get started</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

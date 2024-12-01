@@ -1,5 +1,5 @@
 .reg-container{
-    height: 93vh;
+    height: 86vh;
     width: 100vw;
     display: flex;
     /* flex-direction: column; */
@@ -55,7 +55,11 @@
     align-items:center;
     justify-content:center;
     /* background: rgb(211, 210, 210); */
-    background: black;
+    background: #1D1A26;
+    color: white;
+}
+
+.reg-login-form p a{
     color: white;
 }
 
