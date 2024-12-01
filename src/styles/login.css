@@ -42,6 +42,7 @@
     border: none;
     outline: none;
     background-color: rgb(235, 232, 232);
+    color: #1D1A26;
     border-radius: 8px;
 }
 
@@ -72,7 +73,7 @@
     border-radius: 10px;
     outline: none;
     border: none;
-    background: black;
+    background: #794DFF;
     color: white;
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 
 const ProblemCard = () => {
@@ -12,13 +13,15 @@ const ProblemCard = () => {
           />
         </figure>
         <div class="card-body">
-          <h5 class="card-title mb-2.5">Apple Smart Watch</h5>
+          <h5 class="card-title mb-2.5">Issue title</h5>
           <p class="mb-4">
-            Stay connected, motivated, and healthy with the latest Apple Watch.
+            issue description...Stay connected, motivated, and healthy with the latest Apple Watch.
           </p>
           <div class="card-actions">
-            <button class="btn btn-primary">Buy Now</button>
-            <button class="btn btn-secondary btn-soft">Add to cart</button>
+            <button class="btn btn-primary">
+              <Link to="/detail">View Detail</Link>
+            </button>
+            <button class="btn btn-secondary btn-soft">Location</button>
           </div>
         </div>
       </div>
