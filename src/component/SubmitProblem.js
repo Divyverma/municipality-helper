@@ -2,7 +2,7 @@
 
 const SubmitProblem = () => {
   return (
-    <div class=" p-4 md:p-8 bg-base-100 w-full rounded-lg shadow">
+    <div class=" p-4 md:p-8 bg-base-100 w-full md:h-[86vh] rounded-lg shadow">
       <h5 class="bg-base-300 rounded-t-lg p-4 text-base text-xl font-bold">
         Submit Your Application
       </h5>
@@ -31,23 +31,7 @@ const SubmitProblem = () => {
               <span class="success-message">Looks good!</span>
             </label>
           </div>
-          {/* <!-- Email and password --> */}
-          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <label class="form-control">
-              <div class="label">
-                <span class="label-text">Email</span>
-              </div>
-              <input
-                type="email"
-                class="input"
-                placeholder="john@gmail.com"
-                aria-label="john@gmail.com"
-                required=""
-              />
-              <span class="error-message">Please enter a valid email</span>
-              <span class="success-message">Looks good!</span>
-            </label>
-          </div>
+          
           {/* <!-- Personal Info --> */}
           <div class="w-full">
             <h6 class="text-lg font-semibold">2. Issue Details</h6>
@@ -58,7 +42,7 @@ const SubmitProblem = () => {
               <div class="label">
                 <span class="label-text">Upload Photo</span>
               </div>
-              <input type="file" class="input" required />
+              <input type="file" class="input" multiple required />
               <span class="error-message">Please select the file</span>
               <span class="success-message">Looks good!</span>
             </label>

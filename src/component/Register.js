@@ -27,7 +27,7 @@ const Register = () => {
           </div>
       </div>
       <button>Register</button>
-      <p>Allready have account? <Link to="/login">Login</Link></p>
+      <p>Allready have account? <Link to="/login">Login Here</Link></p>
     </div>
   </div>
   )

@@ -107,3 +107,32 @@
     color: #1D1A26;
     border-radius: 8px;
 }
+
+
+@media (max-width: 450px) {
+    .reg-container {
+        height: 88vh;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .reg-login-form{
+        width: 100%; /* Full width for both sections */
+        height: 90%; /* Adjust height to fit content */
+    }
+
+    .reg-design-part{
+        display: none;
+    }
+
+    .reg-heading {
+        font-size: 28px; /* Smaller font size */
+    }
+
+    .reg-input-fields input {
+        width: 95%; /* Utilize full width with some padding */
+    }
+
+    .reg-login-form button {
+        width: 35%; /* Full width with padding */
+    }
+}

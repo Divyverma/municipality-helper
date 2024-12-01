@@ -86,3 +86,32 @@
     padding: 5px;
     margin-left: -25px;
 }
+
+
+@media (max-width: 450px) {
+    .log-container {
+        height: 82vh;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .log-login-form{
+        width: 100%; /* Full width for both sections */
+        height: 90%; /* Adjust height to fit content */
+    }
+
+    .log-design-part{
+        display: none;
+    }
+
+    .log-heading {
+        font-size: 28px; /* Smaller font size */
+    }
+
+    .log-input-fields input {
+        width: 95%; /* Utilize full width with some padding */
+    }
+
+    .log-login-form button {
+        width: 35%; /* Full width with padding */
+    }
+}
