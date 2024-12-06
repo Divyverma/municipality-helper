@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [citizen, setCitizen] = useState(true)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -59,11 +60,13 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li onClick={hideMenu}>
-              <Link to="/reportproblem">Report Problem</Link>
-            </li>
-            <li onClick={hideMenu}>
+                  <Link to="/reportproblem">Report Problem</Link>
+              </li>
+
+            {/* <li onClick={hideMenu}>
               <Link to="/track">Track Problem</Link>
-            </li>
+            </li> */}
+
             <li onClick={hideMenu}>
               <Link to="/login">Login</Link>
             </li>

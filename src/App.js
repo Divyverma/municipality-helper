@@ -6,7 +6,6 @@ import Register from './component/Register'
 import SubmitProblem from './component/SubmitProblem'
 import Navbar from './component/Navbar'
 import Footer from './component/Footer'
-import TrackPage from './component/TrackPage'
 import Detail from './component/Detail'
 import './index.css'
 
@@ -21,7 +20,6 @@ const App = () => {
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
         <Route path='/reportproblem' element={<SubmitProblem/>} />
-        <Route path='/track' element={<TrackPage/>} />
         <Route path='/detail' element={<Detail/>} />
       </Routes>
       <Footer/>
