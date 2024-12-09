@@ -20,7 +20,7 @@ const Register = () => {
           <div className='selection'>
           <label for="lang">Register as:</label>
           <select>
-            <option value="select option" selected>select option</option>
+            <option value="select option" defaultValue={"Select Option"}>select option</option>
             <option value="Citizens">Citizen</option>
             <option value="Municipal Authorities">Municipal Authorities</option>
           </select>

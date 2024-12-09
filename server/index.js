@@ -116,7 +116,6 @@ app.get("/problem/:id", async(req, res)=>{
 
 // updated issue
 app.put('/updateissue/:id', async(req, res)=>{
-    const {id} = req.params
 
 })
 
