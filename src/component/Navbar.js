@@ -1,16 +1,26 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+const isLogin = () => {
+  return localStorage.getItem("authToken");
+};
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [citizen, setCitizen] = useState(true)
+  const [citizen, setCitizen] = useState(true);
+
+  const Logout = () =>{
+    localStorage.removeItem("authToken")
+    navigate('/login')
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const hideMenu=()=>{
-    setIsMenuOpen(false)
-  }
+  const hideMenu = () => {
+    setIsMenuOpen(false);
+  };
   return (
     <>
       <nav className="navbar bg-base-200 rounded-box flex w-full gap-2 max-sm:flex-col sm:items-center">
@@ -52,24 +62,36 @@ const Navbar = () => {
           // } w-full sm:w-auto`}
           className={`sm:flex sm:items-center sm:justify-end 
             sm:navbar-end   grow basis-full overflow-hidden transition-[height] duration-300 max-sm:w-full ${
-            isMenuOpen ? "block" : "hidden"
-          } w-full sm:w-auto`}
+              isMenuOpen ? "block" : "hidden"
+            } w-full sm:w-auto`}
         >
           <ul className="menu sm:menu-horizontal flex-nowrap sm:gap-2 p-0 text-base">
             <li onClick={hideMenu}>
               <Link to="/">Home</Link>
             </li>
             <li onClick={hideMenu}>
-                  <Link to="/reportproblem">Report Problem</Link>
-              </li>
+              <Link to="/reportproblem">Report Problem</Link>
+            </li>
 
             {/* <li onClick={hideMenu}>
               <Link to="/track">Track Problem</Link>
             </li> */}
 
-            <li onClick={hideMenu}>
+            {isLogin() ? (
+              <li>
+                <Link to="/login">
+                  <button onClick={Logout}>Logout</button>
+                </Link>
+              </li>
+            ) : (
+              <li onClick={hideMenu}>
+                <Link to="/login">Login</Link>
+              </li>
+            )}
+
+            {/* <li onClick={hideMenu}>
               <Link to="/login">Login</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
