@@ -11,7 +11,7 @@ const Register = () => {
 
   const submitForm = async () => {
 
-    const response = await fetch("http://localhost:5000/register", {
+    const response = await fetch("http://localhost:5001/register", {
       method:"POST",
       headers:{
         "Content-Type":"application/json",
@@ -23,7 +23,7 @@ const Register = () => {
       alert(data.message)
       navigate('/login')
     }else{
-      alert(data.error)
+      alert(data.message)
     }
   };
 

@@ -59,7 +59,7 @@ app.post("/login", async (req, res)=>{
     }
 
     // verifying password
-    if(pass != user.rows[0].pass){
+    if(pass !== user.rows[0].pass){
         return res.status(400).json({message: "Invalid email or Password"})
     }
 
@@ -72,7 +72,7 @@ app.post("/login", async (req, res)=>{
 app.post('/reportproblem', async(req, res)=>{
     const {fname, lname, img, title, location, description} = req.body
 
-    if(!fname || !lname || !img || !title || !location || !description){
+    if(!fname || !lname || !title || !location || !description){
        return res.status(400).json({message:"All fields are neccessory"})
     }
 
@@ -121,6 +121,6 @@ app.put('/updateissue/:id', async(req, res)=>{
 
 
 
-app.listen(5000, () => {
+app.listen(5001, () => {
     console.log(`Server is running on port 5000`)
 })
