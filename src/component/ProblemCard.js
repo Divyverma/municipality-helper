@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
+import { FaLocationDot } from "react-icons/fa6";
 
 
 const ProblemCard = () => {
 
   const [problems, setProblems] = useState([])
-
 
   useEffect(() => {
     getProblem();
@@ -42,7 +42,10 @@ const ProblemCard = () => {
                   <button class="btn btn-primary">
                     <Link to="/detail">View Detail</Link>
                   </button>
-                  <button class="btn btn-secondary btn-soft">{item.location}</button>
+                  <button class="btn btn-secondary btn-soft">
+                  <FaLocationDot/>
+                  {item.location}
+                  </button>
                 </div>
               </div>
             </div>
