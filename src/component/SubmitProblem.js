@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 
 
@@ -6,6 +6,14 @@ const SubmitProblem = () => {
 
   const navigate = useNavigate();
 
+  useEffect(()=>{
+    const post = localStorage.getItem("authToken")
+
+    if(post === "Municipal Authority"){
+      navigate("/")
+    }
+  
+  },)
   const [fname, setFname] = useState("")
   const [lname, setLname] = useState("")
   const [title, setTitle] = useState("")
@@ -16,7 +24,7 @@ const SubmitProblem = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5001/reportproblem", {
+      const response = await fetch("http://localhost:5000/reportproblem", {
         method: "POST",
         body: JSON.stringify({ fname, lname, img, title, location, description }),
         headers: {

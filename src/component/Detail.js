@@ -12,7 +12,7 @@ const Detail = () => {
   useEffect(()=>{
     const getDetail=async()=>{
       try{
-        var result = await axios.get(`http://localhost:5001/problem/${id}`);
+        var result = await axios.get(`http://localhost:5000/problem/${id}`);
         // result = await result.json()
         setDetail(result.data.result)
       }catch(error){

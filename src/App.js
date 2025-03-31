@@ -14,7 +14,7 @@ const isAunthenticated = () => {
 };
 
 const ProtectedRoute = ({ children }) => {
-  return isAunthenticated() ? children : <Navigate to="/login" />;
+  return isAunthenticated()  ? children : <Navigate to="/login" />;
 };
 
 const App = () => {

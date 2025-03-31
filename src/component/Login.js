@@ -8,17 +8,20 @@ const Login = () => {
   const [pass, setPass] = useState("");
 
   const submitLogin = async () => {
-    const response = await fetch("http://localhost:5001/login", {
+    const response = await fetch("http://localhost:5000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({email, pass}),
     });
+
+
     const data = await response.json();
+
     if (response.ok) {
       alert(data.message);
-      localStorage.setItem("authToken", email);
+      localStorage.setItem("authToken", data.post);
       navigate("/");
     } else {
       alert(data.message)

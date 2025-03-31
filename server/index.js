@@ -45,7 +45,9 @@ app.post("/login", async (req, res) => {
         return res.status(400).json({ message: "Invalid email or Password" })
     }
 
-    res.status(200).json({ message: "Login successfully" })
+    console.log(user.rows)
+
+    res.status(200).json({ message: "Login successfully" , post : user.rows[0].post})
 })
 
 

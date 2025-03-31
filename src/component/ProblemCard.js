@@ -12,7 +12,7 @@ const ProblemCard = () => {
   }, [])
 
   const getProblem = async () => {
-    var result = await fetch("http://localhost:5001/problems")
+    var result = await fetch("http://localhost:5000/problems")
     result = await result.json()
     setProblems(result.result);
     // console.log(result.result.length)

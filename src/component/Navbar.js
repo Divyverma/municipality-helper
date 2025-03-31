@@ -7,8 +7,8 @@ const isLogin = () => {
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const post = localStorage.getItem("authToken")
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [citizen, setCitizen] = useState(true);
 
   const Logout = () =>{
     localStorage.removeItem("authToken")
@@ -26,12 +26,14 @@ const Navbar = () => {
       <nav className="navbar bg-base-200 rounded-box flex w-full gap-2 max-sm:flex-col sm:items-center">
         <div className="flex w-full items-center justify-between">
           <div className="navbar-start items-center justify-between max-sm:w-full">
-            <Link
-              className="link text-base-content/90 link-neutral text-xl font-semibold no-underline"
-              to="/"
-            >
-              Municipality Helper
-            </Link>
+
+              <Link
+                className="link text-base-content/90 link-neutral text-xl font-semibold no-underline"
+                to="/"
+              >
+                Municipality Helper
+              </Link>
+            
             <div className="sm:hidden">
               <button
                 type="button"
@@ -69,9 +71,14 @@ const Navbar = () => {
             <li onClick={hideMenu}>
               <Link to="/">Home</Link>
             </li>
-            <li onClick={hideMenu}>
-              <Link to="/reportproblem">Report Problem</Link>
-            </li>
+
+            {
+              (post === "Municipal Authority")? <></> : (
+                <li onClick={hideMenu}>
+                  <Link to="/reportproblem">Report Problem</Link>
+                </li>)
+            }
+            
 
             {/* <li onClick={hideMenu}>
               <Link to="/track">Track Problem</Link>
