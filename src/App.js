@@ -42,7 +42,7 @@ const App = () => {
           }
         />
         <Route
-          path="/detail"
+          path="/detail/:id"
           element={
             <ProtectedRoute>
               <Detail />
